@@ -5,6 +5,7 @@
 <div>
 <a href="https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/">TamperMonkey for Firefox</a>
 </div>
+
 # Brainly Answer Unhide
 
 Just unhides the answers in Brainly.com
