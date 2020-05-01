@@ -1,4 +1,3 @@
-<title>Edgenuity / Brainly Scripts</title>
 
 # You require TamperMonkey to use these scripts!!
 <div>
