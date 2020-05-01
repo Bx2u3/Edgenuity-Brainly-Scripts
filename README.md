@@ -1,13 +1,10 @@
-<<<<<<< HEAD
 # You require TamperMonkey to use these scripts!!
-<form action="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=en">
-    <input type="submit" value="TamperMonkey For Chrome" />
-</form>
-<form action="https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/">
-    <input type="submit" value="TamperMonkey For FireFox" />
-</form>
-=======
->>>>>>> parent of 3705078... Update README.md
+<div>
+<a href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=en">TamperMonkey for Chrome</a>
+</div>
+<div>
+<a href="https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/">TamperMonkey for Firefox</a>
+</div>
 # Brainly Answer Unhide
 
 Just unhides the answers in Brainly.com
