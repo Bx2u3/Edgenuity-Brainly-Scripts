@@ -1,6 +1,10 @@
 # You require TamperMonkey to use these scripts!!
-<a href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=en">TamperMonkey for Chrome</a>
-<a href="https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/">TamperMonkey for Firefox</a>
+<form action="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=en">
+    <input type="submit" value="TamperMonkey For Chrome" />
+</form>
+<form action="https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/">
+    <input type="submit" value="TamperMonkey For FireFox" />
+</form>
 # Brainly Answer Unhide
 
 <p>Just unhides the answers in Brainly.com</p>
