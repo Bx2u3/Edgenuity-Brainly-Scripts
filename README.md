@@ -1,3 +1,5 @@
+<title>Edgenuity / Brainly Scripts</title>
+
 # You require TamperMonkey to use these scripts!!
 <div>
 <a href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=en">TamperMonkey for Chrome</a>
