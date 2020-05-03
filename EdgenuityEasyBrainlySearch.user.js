@@ -4,7 +4,7 @@
 // @version      1
 // @description  adds some easy searching
 // @author       Subatomicmc
-// @match        https://r09.core.learn.edgenuity.com/Player/
+// @match        https://*.core.learn.edgenuity.com/Player/
 // @grant        none
 // ==/UserScript==
 
