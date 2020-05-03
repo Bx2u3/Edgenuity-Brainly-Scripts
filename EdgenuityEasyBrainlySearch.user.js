@@ -4,27 +4,53 @@
 // @version      1
 // @description  adds some easy searching
 // @author       Subatomicmc
-// @match        media.edgenuity.com/contentengine/frames/*
+// @match        https://r09.core.learn.edgenuity.com/Player/
 // @grant        none
 // ==/UserScript==
 
 (function() {
     'use strict';
+    var innerFrameExists = false
+    var theDocument = document.getElementById("stageFrame").contentDocument
+    var theWindow = document.getElementById("stageFrame").contentWindow
+    var frameBody = document.getElementById("stageFrame")
+    var buttonpressed = false
     var button = document.createElement("button")
     button.id = "searchButton"
     button.innerText = "Search on Brainly"
     button.style.position = "absolute"
     button.style.visibility = "visible"
     document.body.append(button)
-    document.addEventListener("mouseup" , mouseup)
-    document.addEventListener("mousedown" , mousedown)
-    var buttonpressed = false;
+    document.getElementById("searchButton").onclick = function(){
+        buttonpressed = true
+        var url = 'https://brainly.com/app/ask?entry=top&q=' + encodeURIComponent(theDocument.getSelection().toString())
+        window.open(url , '_blank')}
+    setInterval(addthestuff , 300)
+    function addthestuff()
+    {
+        if(frameBody.contentDocument.getElementById("iFramePreview") != null)
+        {
+            frameBody = frameBody.contentDocument.getElementById("iFramePreview")
+        }
+        else
+        {
+            frameBody = document.getElementById("stageFrame")
+        }
+        if(frameBody.onmousedown == null || frameBody.onmouseup == null)
+        {
+            theDocument = frameBody.contentDocument
+            theWindow = frameBody.contentWindow
+            frameBody.contentDocument.body.onmouseup = mouseup
+            frameBody.contentDocument.body.onmousedown = mousedown
+        }
+    }
     function mouseup(e){
-        var selection = document.getSelection().toString()
+        var selection = theDocument.getSelection().toString()
         if(buttonpressed == false && selection != ""){
+            var rect = frameBody.getBoundingClientRect()
             document.getElementById("searchButton").style.visibility = "visible"
-            document.getElementById("searchButton").style.top = e.clientY + 10 + "px"
-            document.getElementById("searchButton").style.left = e.clientX + "px"
+            document.getElementById("searchButton").style.top = e.clientY + rect.y + 10 + "px"
+            document.getElementById("searchButton").style.left = e.clientX + rect.x + "px"
         }
         else
         {
@@ -32,22 +58,15 @@
         }
     }
     function mousedown(e){
-        var ignore = document.getElementById("searchButton")
-        if(e.target === ignore){
-            buttonpressed = true
-            var url = 'https://brainly.com/app/ask?entry=top&q=' + encodeURIComponent(document.getSelection().toString())
-            window.open(url , '_blank')
-            return
-        }
         document.getElementById("searchButton").style.visibility = "hidden"
-        if (window.getSelection) {
-            if (window.getSelection().empty) {
-                window.getSelection().empty();
-            } else if (window.getSelection().removeAllRanges) {
-                window.getSelection().removeAllRanges();
+        if (theWindow.getSelection) {
+            if (theWindow.getSelection().empty) {
+                theWindow.getSelection().empty();
+            } else if (theWindow.getSelection().removeAllRanges) {
+                theWindow.getSelection().removeAllRanges();
             }
-        } else if (document.selection) {
-            document.selection.empty();
+        } else if (theDocument.selection) {
+            theDocument.selection.empty();
         }
     }
     // Your code here...
