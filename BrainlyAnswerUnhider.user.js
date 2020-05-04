@@ -10,6 +10,12 @@
 
 (function() {
     'use strict';
+    function unicodeToChar(text) {
+        return text.replace(/\\u[\dA-F]{4}/gi,
+                            function (match) {
+            return String.fromCharCode(parseInt(match.replace(/\\u/g, ''), 16));
+        });
+    }
     var data = document.getElementsByClassName("js-main-question").item(0).dataset.z
     if(data.length > 20)
     {
@@ -22,7 +28,7 @@
                 break
             }
             console.log(begin)
-            index = data.indexOf('"', begin)
+            index = data.indexOf('"mark"', begin)-7
             answers.push(data.substring(begin , index))
             var tempi = data.indexOf("comments", index)
             if (tempi > index)
@@ -35,7 +41,7 @@
         removeElms("brn-kodiak-answer__preview-end")
         var answerBoxes = document.getElementsByClassName("brn-kodiak-answer__content")
         for(var i = 0; i<answerBoxes.length ; i++){
-            answerBoxes[i].innerHTML = decodeURIComponent(JSON.parse('"' + answers[i].replace('"', '\\"') + '"'))
+            answerBoxes[i].innerHTML = decodeURIComponent(unicodeToChar(answers[i].replace(/<\\\//g , "</")))
         }
 
         function removeElms(classname){
