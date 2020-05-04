@@ -10,7 +10,7 @@
 
 (function() {
     'use strict';
-    var innerFrameExists = false
+    var InnerFrameIsCurrent = false
     var theDocument = document.getElementById("stageFrame").contentDocument
     var theWindow = document.getElementById("stageFrame").contentWindow
     var frameBody = document.getElementById("stageFrame")
@@ -28,13 +28,11 @@
     setInterval(addthestuff , 300)
     function addthestuff()
     {
-        if(frameBody.contentDocument.getElementById("iFramePreview") != null)
+        var frameBody = document.getElementById("stageFrame")
+        if(frameBody.contentDocument.getElementById("iFramePreview") != null || InnerFrameIsCurrent == true)
         {
             frameBody = frameBody.contentDocument.getElementById("iFramePreview")
-        }
-        else
-        {
-            frameBody = document.getElementById("stageFrame")
+            InnerFrameIsCurrent = true
         }
         if(frameBody.onmousedown == null || frameBody.onmouseup == null)
         {
