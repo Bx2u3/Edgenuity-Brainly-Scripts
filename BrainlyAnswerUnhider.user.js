@@ -28,7 +28,7 @@
                 break
             }
             console.log(begin)
-            index = data.indexOf('"mark"', begin)-7
+            index = data.indexOf('"mark"', begin)-2
             answers.push(data.substring(begin , index))
             var tempi = data.indexOf("comments", index)
             if (tempi > index)
