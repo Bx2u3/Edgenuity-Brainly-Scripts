@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         Edgenuity Easy Brainly Search
+// @name         Keystone School Easy Brainly Search
 // @namespace    reddit.com/u/subatomicmc
 // @version      1
 // @description  adds some easy searching
