@@ -24,19 +24,21 @@
         var answers = []
         while(true){
             var begin = data.indexOf('"content":"', index) + 11
-            index = data.indexOf('"mark"', begin)-2
-            if(begin > index){
+            if(begin < index){
                 break
             }
-            console.log(begin)
-            console.log(index)
-            console.log("========")
+            index = data.indexOf('"mark"', begin)-2
             answers.push(data.substring(begin , index))
             var tempi = data.indexOf("comments", index)
-            if (tempi > index)
-            {
+            if(tempi > index){
                 index = data.indexOf( '}',tempi)
             }
+            if(index < begin)
+            {break}
+            console.log("begin" + begin)
+            console.log("index" + index)
+            console.log("comments" + tempi)
+            console.log("==================")
         }
         console.log(answers)
         removeElms("brn-kodiak-answer__unlock")
