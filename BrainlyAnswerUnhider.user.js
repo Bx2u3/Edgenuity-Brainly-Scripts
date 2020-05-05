@@ -24,11 +24,13 @@
         var answers = []
         while(true){
             var begin = data.indexOf('"content":"', index) + 11
-            if(begin < index){
+            index = data.indexOf('"mark"', begin)-2
+            if(begin > index){
                 break
             }
             console.log(begin)
-            index = data.indexOf('"mark"', begin)-2
+            console.log(index)
+            console.log("========")
             answers.push(data.substring(begin , index))
             var tempi = data.indexOf("comments", index)
             if (tempi > index)
