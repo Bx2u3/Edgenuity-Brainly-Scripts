@@ -18,4 +18,4 @@ Adds a button that shows up when you select text. Clicking on the button takes y
 
 <h2>Assignment Unlocker</h2>
 Lets you go to not unlocked assignments on the course map. You may need to reload the page when on the coursemap to start the script.
-<a href="https://raw.githubusercontent.com/Subatomicmc/Edgenuity-Brainly-Scripts/raw/master/AssignmentUnlocker.user.js">Click to install</a>
+<a href="https://github.com/Subatomicmc/Edgenuity-Brainly-Scripts/raw/master/AssignmentUnlocker.user.js">Click to install</a>
