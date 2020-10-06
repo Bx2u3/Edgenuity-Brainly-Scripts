@@ -15,3 +15,7 @@ Just unhides the answers in Brainly.com
 <h2>Edgenuity Brainly Search</h2>
 Adds a button that shows up when you select text. Clicking on the button takes you to the brainly search page for the selection.
 <a href="https://raw.githubusercontent.com/Subatomicmc/Edgenuity-Brainly-Scripts/master/EdgenuityEasyBrainlySearch.user.js">Click to install</a>
+
+<h2>Assignment Unlocker</h2>
+Lets you go to not unlocked assignments on the course map. You may need to reload the page when on the coursemap to start the script.
+<a href="https://raw.githubusercontent.com/Subatomicmc/Edgenuity-Brainly-Scripts/raw/master/AssignmentUnlocker.user.js">Click to install</a>
