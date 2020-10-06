@@ -7,7 +7,7 @@
 <a href="https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/">TamperMonkey for Firefox</a>
 </div>
 
-<h2>Brainly Answer Unhide</h2>
+<h2>Brainly Answer Unhide (Broken)</h2>
 
 Just unhides the answers in Brainly.com
 <a href="https://raw.githubusercontent.com/Subatomicmc/Edgenuity-Brainly-Scripts/master/BrainlyAnswerUnhider.user.js">Click to install</a>
