@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Assignment Unlocker
 // @namespace    http://tampermonkey.net/
-// @version      1.0.0
+// @version      1.1.0
 // @description  Lets you start locked assignments
 // @author       SubatomicMC
 // @match        https://student.edgenuity.com/enrollment/*/coursemap
@@ -38,7 +38,7 @@
         function mutationFunc(mutationsList, observer){
             for(const mutation of mutationsList) {
                 for(var node of mutation.addedNodes){
-                    if(node.classList.contains("ActivityTile-status-gated")){
+                    if(node.classList.contains("ActivityTile-status-gated") || node.classList.contains("ActivityTile-status-locked")){
                         console.log("found locked button")
                         lastButton = node;
                         node.setAttribute("onclick", "document.location='"+ url + node.id + "'");
