@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Edgenuity Easy Brainly Search
 // @namespace    reddit.com/u/subatomicmc
-// @version      1
+// @version      1.1
 // @description  adds some easy searching
 // @author       Subatomicmc
 // @match        https://*.core.learn.edgenuity.com/Player/
