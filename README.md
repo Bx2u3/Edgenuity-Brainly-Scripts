@@ -1,5 +1,5 @@
 
-I made the first two of these scripts while learning js so dont judge the code quality lmao
+I made the first two of these scripts while learning js so dont judge the code quality lmao. 
 I also have no clue how to use git so dont judge my github page either
 
 <h2>You require TamperMonkey to use these scripts!!</h2>
