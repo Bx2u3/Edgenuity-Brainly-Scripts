@@ -1,3 +1,7 @@
+
+I made the first two of these scripts while learning js so dont judge the code quality lmao
+I also have no clue how to use git so dont judge my github page either
+
 <h2>You require TamperMonkey to use these scripts!!</h2>
 <div>
 <a href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=en">TamperMonkey for Chrome</a>
@@ -5,9 +9,6 @@
 <div>
 <a href="https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/">TamperMonkey for Firefox</a>
 </div>
-
-I made the first two of these scripts while learning js so dont judge the code quality lmao
-
 <h2>Brainly Answer Unhide (Broken)</h2>
 
 Just unhides the answers in Brainly.com
