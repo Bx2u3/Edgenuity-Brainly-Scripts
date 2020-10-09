@@ -46,9 +46,9 @@
         var selection = theDocument.getSelection().toString()
         if(buttonpressed == false && selection != ""){
             var rect = frameBody.getBoundingClientRect()
-            document.getElementById("searchButton").style.visibility = "visible"
-            document.getElementById("searchButton").style.top = e.clientY + rect.y + 10 + "px"
-            document.getElementById("searchButton").style.left = e.clientX + rect.x + "px"
+            button.style.visibility = "visible"
+            button.style.top = e.clientY + rect.y + 10 + "px"
+            button.style.left = e.clientX + rect.x + "px"
         }
         else
         {
