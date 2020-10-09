@@ -1,14 +1,17 @@
 // ==UserScript==
 // @name         Assignment Unlocker
 // @namespace    http://tampermonkey.net/
-// @version      1.1.0
+// @version      1.2.0
 // @description  Lets you start locked assignments
 // @author       SubatomicMC
 // @match        https://student.edgenuity.com/enrollment/*/coursemap
+// @match        https://student.edgenuity.com/
 // @grant        none
 // ==/UserScript==
 
 (function() {
+    var url;
+    var observerTimeout;
     'use strict';
     function readCookie(name) {
         var nameEQ = name + "=";
@@ -19,6 +22,18 @@
             if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
         }
         return null;
+    }
+    function checkURL(){
+        if(url != document.location.href){
+            url = document.location.href;
+            clearTimeout(observerTimeout);
+            console.log("url changed")
+            if(url.indexOf("https://student.edgenuity.com/enrollment/")!= -1){
+                console.log("is timeline");
+                tryToStartObserver();
+            }
+        }
+
     }
     function tryToStartObserver(){
         if(document.getElementsByClassName("course-timeline").length == 0){
@@ -49,5 +64,9 @@
         var observer = new MutationObserver(mutationFunc);
         observer.observe(document.getElementsByClassName("course-timeline")[0],{ attributes: false, childList: true, subtree: true });
     }
-    tryToStartObserver();
+    url = document.location.href;
+    setInterval(checkURL,100);
+    if(url.indexOf("https://student.edgenuity.com/enrollment/")!= -1){
+        tryToStartObserver();
+    }
 })();
