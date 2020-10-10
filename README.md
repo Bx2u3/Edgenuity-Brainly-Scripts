@@ -21,3 +21,9 @@ Adds a button that shows up when you select text. Clicking on the button takes y
 <h2>Assignment Unlocker</h2>
 Lets you go to not unlocked assignments on the course map. You may need to reload the page when on the coursemap to start the script.
 <a href="https://github.com/Subatomicmc/Edgenuity-Brainly-Scripts/raw/master/AssignmentUnlocker.user.js">Click to install</a>
+
+<h2>Video Watcher</h2>
+Completes Warm-ups, Instructions, and Summarys automatically so you can do the assignments without the videos interupting you. Starts automatically on coursemap, so you may want to turn off the script in tampermonkey when not in use.
+REQUIRES EdgenTweaks with auto advance, and practice guessing on.
+<a href="https://host.gradyn.com/edgentweaks/">Install EdgenTweaks</a>
+<a href="https://github.com/Subatomicmc/Edgenuity-Brainly-Scripts/raw/master/VideoWatcher.user.js">Install Video Watcher</a>
