@@ -92,7 +92,6 @@
         var button = document.createElement("button");
         button.classList.add("goRight");
         button.setAttribute("onclick","if(!document.getElementById('stageFrame').contentWindow.API.FrameChain.framesStatus.includes('incomplete')){window.close()}");
-        button.class = "goRight"
         document.body.appendChild(button);
     }
 })();
