@@ -1,11 +1,10 @@
 // ==UserScript==
 // @name         Assignment Unlocker
 // @namespace    http://tampermonkey.net/
-// @version      1.2.0
+// @version      1.2.1
 // @description  Lets you start locked assignments
 // @author       SubatomicMC
-// @match        https://student.edgenuity.com/enrollment/*/coursemap
-// @match        https://student.edgenuity.com/
+// @match        https://student.edgenuity.com/*
 // @grant        none
 // ==/UserScript==
 
