@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Edgenuity Video Watcher
 // @namespace    http://tampermonkey.net/
-// @version      1.0.1
+// @version      1.1.0
 // @description  Automates watching videos
 // @author       Subatomicmc
 // @match        https://student.edgenuity.com/enrollment/*/coursemap
