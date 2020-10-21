@@ -14,7 +14,7 @@ I also have no clue how to use git so dont judge my github page either
 <p>Just unhides the answers in Brainly.com</p>
 <a href="https://raw.githubusercontent.com/Subatomicmc/Edgenuity-Brainly-Scripts/master/BrainlyAnswerUnhider.user.js">Click to install</a>
 
-<h2>Edgenuity Brainly Search</h2>
+<h2>Edgenuity Easy Brainly Search</h2>
 <p>Adds a button that shows up when you select text. Clicking on the button takes you to the brainly search page for the selection.</p>
 <a href="https://raw.githubusercontent.com/Subatomicmc/Edgenuity-Brainly-Scripts/master/EdgenuityEasyBrainlySearch.user.js">Click to install</a>
 
