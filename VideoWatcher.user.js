@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Edgenuity Video Watcher
 // @namespace    http://tampermonkey.net/
-// @version      1.1.0
+// @version      1.2.0
 // @description  Automates watching videos
 // @author       Subatomicmc
 // @match        https://student.edgenuity.com/enrollment/*/coursemap
@@ -10,6 +10,12 @@
 // ==/UserScript==
 
 (function() {
+    function playVideo(){
+        var playButton = window.frames[0].document.getElementById("uid1_play");
+        if(playButton.className = "play"){
+            playButton.children[0].click();
+         }
+    }
     'use strict';
     function readCookie(name) {
         var nameEQ = name + "=";
@@ -94,5 +100,7 @@
         button.classList.add("footnav");
         button.setAttribute("onclick","if(!document.getElementById('stageFrame').contentWindow.API.FrameChain.framesStatus.includes('incomplete')){window.close()}");
         document.body.appendChild(button);
+        console.log("starting interval");
+        setInterval(playVideo,1000);
     }
 })();
