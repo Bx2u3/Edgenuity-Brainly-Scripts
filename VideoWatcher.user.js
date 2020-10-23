@@ -12,8 +12,10 @@
 (function() {
     function playVideo(){
         var playButton = window.frames[0].document.getElementById("uid1_play");
-        if(playbutton != undefined && playButton.className == "play"){
-            playButton.children[0].click();
+        if(playbutton != undefined){
+            if(playButton.className == "play"){
+                playButton.children[0].click();
+            }
          }
     }
     'use strict';
