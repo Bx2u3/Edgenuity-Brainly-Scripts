@@ -12,7 +12,7 @@
 (function() {
     function playVideo(){
         var playButton = window.frames[0].document.getElementById("uid1_play");
-        if(playButton.className = "play"){
+        if(playbutton != undefined && playButton.className = "play"){
             playButton.children[0].click();
          }
     }
