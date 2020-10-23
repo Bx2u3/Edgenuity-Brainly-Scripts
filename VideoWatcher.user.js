@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Edgenuity Video Watcher
 // @namespace    http://tampermonkey.net/
-// @version      1.2.2
+// @version      1.2.3
 // @description  Automates watching videos
 // @author       Subatomicmc
 // @match        https://student.edgenuity.com/enrollment/*/coursemap
@@ -12,7 +12,7 @@
 (function() {
     function playVideo(){
         var playButton = window.frames[0].document.getElementById("uid1_play");
-        if(playbutton != undefined){
+        if(playButton != undefined){
             if(playButton.className == "play"){
                 playButton.children[0].click();
             }
