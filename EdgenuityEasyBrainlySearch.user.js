@@ -34,12 +34,14 @@
             frameBody = frameBody.contentDocument.getElementById("iFramePreview")
             InnerFrameIsCurrent = true
         }
-        if(frameBody.onmousedown == null || frameBody.onmouseup == null)
-        {
-            theDocument = frameBody.contentDocument
-            theWindow = frameBody.contentWindow
-            frameBody.contentDocument.body.onmouseup = mouseup
-            frameBody.contentDocument.body.onmousedown = mousedown
+        if(frameBody != null){
+            if(frameBody.onmousedown == null || frameBody.onmouseup == null)
+            {
+                theDocument = frameBody.contentDocument
+                theWindow = frameBody.contentWindow
+                frameBody.contentDocument.body.onmouseup = mouseup
+                frameBody.contentDocument.body.onmousedown = mousedown
+            }
         }
     }
     function mouseup(e){
