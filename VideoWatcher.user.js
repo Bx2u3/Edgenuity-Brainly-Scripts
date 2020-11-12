@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Edgenuity Video Watcher
 // @namespace    http://tampermonkey.net/
-// @version      1.2.3
+// @version      1.3
 // @description  Automates watching videos
 // @author       Subatomicmc
 // @match        https://student.edgenuity.com/enrollment/*/coursemap
@@ -10,11 +10,12 @@
 // ==/UserScript==
 
 (function() {
+    var firstPause = false;
     function playVideo(){
         var playButton = window.frames[0].document.getElementById("uid1_play");
         if(playButton != undefined){
             if(playButton.className == "play"){
-                playButton.children[0].click();
+                setTimeout(function(){playButton.children[0].click();},1000);
             }
          }
     }
@@ -35,7 +36,7 @@
     var enrollment = loc.substr(temp,36);
     var url = '//r' + (realm.length == 1?"0":"") + realm + ".core.learn.edgenuity.com/lmsapi/sle/api/enrollments/"+ enrollment +"/activity/";
     var elements = [];
-    var acceptedNames = ["Instruction","Warm-Up","Summary"];
+    var acceptedNames = ["Instruction","Warm-Up","Summary","Direct Instruction"];
     var timeline;
     var currentAssignment = 0;
     var openedWindow;
@@ -52,7 +53,8 @@
     }
     function nextAssignment(){
         if(scrolled){
-            elements = timeline.getElementsByClassName("ActivityTile-status-gated");
+            elements = Array.from(timeline.getElementsByClassName("ActivityTile-status-gated"));
+            elements = elements.concat(Array.from(timeline.getElementsByClassName("ActivityTile-late")))
             console.log("getting new list", minYpos);
             scrolled = false;
         }
@@ -70,6 +72,11 @@
         else{
             clearInterval(theInterval);
             theInterval = setInterval(nextAssignment,10);
+        }
+        //quick fix idk whats really wrong
+        if(elements[currentAssignment].parentElement == null){
+            elements = null;
+            scrolled = true;
         }
         if(elements[currentAssignment].parentElement.offsetTop > minYpos && acceptedNames.includes(elements[currentAssignment].getElementsByTagName("SPAN")[0].innerText)){
             console.log(elements[currentAssignment]);
