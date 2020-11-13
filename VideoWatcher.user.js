@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Edgenuity Video Watcher
 // @namespace    http://tampermonkey.net/
-// @version      1.3
+// @version      1.4
 // @description  Automates watching videos
 // @author       Subatomicmc
 // @match        https://student.edgenuity.com/enrollment/*/coursemap
@@ -10,14 +10,11 @@
 // ==/UserScript==
 
 (function() {
-    var firstPause = false;
     function playVideo(){
         var playButton = window.frames[0].document.getElementById("uid1_play");
         if(playButton != undefined){
-            if(playButton.className == "play"){
-                setTimeout(function(){playButton.children[0].click();},1000);
-            }
-         }
+            setTimeout(function(){if(playButton.className == "play"){playButton.children[0].click();}},1000);
+        }
     }
     'use strict';
     function readCookie(name) {
@@ -37,6 +34,7 @@
     var url = '//r' + (realm.length == 1?"0":"") + realm + ".core.learn.edgenuity.com/lmsapi/sle/api/enrollments/"+ enrollment +"/activity/";
     var elements = [];
     var acceptedNames = ["Instruction","Warm-Up","Summary","Direct Instruction"];
+    //var acceptedNames = ["Assignment"];
     var timeline;
     var currentAssignment = 0;
     var openedWindow;
@@ -52,9 +50,9 @@
         }
     }
     function nextAssignment(){
+        console.log("called");
         if(scrolled){
-            elements = Array.from(timeline.getElementsByClassName("ActivityTile-status-gated"));
-            elements = elements.concat(Array.from(timeline.getElementsByClassName("ActivityTile-late")))
+            elements = timeline.getElementsByClassName("ActivityTile");
             console.log("getting new list", minYpos);
             scrolled = false;
         }
@@ -75,10 +73,11 @@
         }
         //quick fix idk whats really wrong
         if(elements[currentAssignment].parentElement == null){
-            elements = null;
+            currentAssignment = 0;
+            elements = [];
             scrolled = true;
         }
-        if(elements[currentAssignment].parentElement.offsetTop > minYpos && acceptedNames.includes(elements[currentAssignment].getElementsByTagName("SPAN")[0].innerText)){
+        if(elements[currentAssignment].parentElement.offsetTop > minYpos && !(elements[currentAssignment].classList.contains("ActivityTile-status-completed")) && acceptedNames.includes(elements[currentAssignment].getElementsByTagName("SPAN")[0].innerText)){
             console.log(elements[currentAssignment]);
             clearInterval(theInterval);
             allUndoneVideos.push(elements[currentAssignment]);
