@@ -25,5 +25,5 @@ I also have no clue how to use git so dont judge my github page either
 <h2>Video Watcher</h2>
 <p>Completes Warm-ups, Instructions, and Summarys automatically so you can do the assignments without the videos interupting you. Starts automatically on coursemap, so you may want to turn off the script in tampermonkey when not in use.</p>
 <p>REQUIRES EdgenTweaks with auto advance, and practice guessing on.</p>
-<a href="https://host.gradyn.com/edgentweaks/">Install EdgenTweaks</a><br>
+<a href="https://gitlab.com/roglemorph/edgentweaks/-/raw/master/edgentweaks.user.js">Install EdgenTweaks</a><br>
 <a href="https://github.com/Subatomicmc/Edgenuity-Brainly-Scripts/raw/master/VideoWatcher.user.js">Install Video Watcher</a>
