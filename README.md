@@ -3,7 +3,9 @@ I made the first two of these scripts while learning js so dont judge the code q
 I also have no clue how to use git so dont judge my github page either
 
 <h1>NEW VIDEO SKIPPER SCRIPT</h1>
-<p>Cant release it publicly sorry</p>
+<p>Cant release it publicly sorry
+<br> I have to run it on my computer and it takes like 30 mins to run so im charging 5 dollars per class sorru
+</p>
 <p>Contact me for details.
 <br>Reddit: u/subatomicmc
 <br>Discord: s | || || |_#9535
