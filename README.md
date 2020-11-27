@@ -2,7 +2,7 @@
 I made the first two of these scripts while learning js so dont judge the code quality lmao. 
 I also have no clue how to use git so dont judge my github page either
 
-<h1>NEW VIDEO SKIPPER SCRIPT 5$ PER CLASS</h1>
+<h1>NEW VIDEO SKIPPER SCRIPT</h1>
 <p>Cant release it publicly sorry</p>
 <p>Contact me for details.
 <br>Reddit: u/subatomicmc
